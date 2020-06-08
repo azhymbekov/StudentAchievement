@@ -1,0 +1,42 @@
+﻿@model IQueryable<StudentAchievement.Service.Models.UserModel>
+@{
+    ViewData["Title"] = "GetListOfStudents";
+}
+
+<h1>Список студентов</h1>
+
+<table class="table">
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <span style="color: blueviolet;">
+
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </span>
+
+                    <br />
+                    <span style="font-size: xx-small">  сумма : @item.LastName</span>
+                </td>
+
+                <td>
+                    @Html.ActionLink("Редактировать", "SaveData", new { id = item.Id })
+                </td>
+
+                <td>
+                    @Html.ActionLink("Детали", "UserDetails", new { id = item.Id })
+                </td>
+
+                <td>
+                    @Html.ActionLink("Удалить", "Delete", new { Id = item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Добавить уроки", "AppointSubject", "Course", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

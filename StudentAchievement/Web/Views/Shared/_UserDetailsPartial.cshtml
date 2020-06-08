@@ -1,0 +1,34 @@
+﻿@model StudentAchievement.Service.Models.UserModel
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<h3>@Model.FirstName</h3>
+<h3>@Model.LastName</h3>
+<h5>@Model.Login</h5>
+
+<br />
+<div class="table-responsive">
+    <table class="table table-sm">
+        <tbody>
+            <tr>
+                <th width="30%" scope="row">
+                    <strong>Роль:</strong>
+                </th>
+                <td>
+                    <strong>@Model.RoleId</strong>
+                </td>
+            </tr>
+            
+            <tr>
+                <th width="30%" scope="row">
+                    <strong>Email:</strong>
+                </th>
+                <td>
+                    <strong>@Model.Email</strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center">
+    <a asp-action="ChangePassword" asp-controller="Profile" class="btn btn-primary">Поменять пароль</a>
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<StudentAchievement.Service.Models.CourseDto>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="SaveData">Добавить</a>
+</p>
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <span style="color: blueviolet;">
+
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </span>
+
+                   
+                </td>
+
+                <td>
+                    @Html.ActionLink("Редактировать", "SaveData", new { id = item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Детали", "Details", new { id = item.Id })
+                </td>
+                <td>
+                    @Html.ActionLink("Удалить", "Delete", new { Id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

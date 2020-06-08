@@ -1,0 +1,15 @@
+﻿@model StudentAchievement.Service.Models.UserModel
+
+<div class="classic-tabs veteran-form" padding-bottom: 30px">
+
+    <ul class="nav tabs-primary" id="detailsTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link  waves-light active show" id="userDetails" data-toggle="tab" href="#userDetailsContent" role="tab" aria-controls="profile-classic-shadow" aria-selected="true"><strong>Профиль пользователя</strong></a>
+        </li>
+    </ul>
+    <div class="tab-content card" id="detailsContent">
+        <div class="tab-pane fade active show" id="userDetailsContent" role="tabpanel" aria-labelledby="userDetails">
+            @await Html.PartialAsync("_UserDetailsPartial", Model)
+        </div>
+    </div>
+</div>

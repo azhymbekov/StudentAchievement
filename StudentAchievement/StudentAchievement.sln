@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAchievement", "StudentAchievement\StudentAchievement.csproj", "{7F00CD8B-491C-4C13-AAB3-14AE23411232}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8B358AE3-2E48-4631-8B84-20FD3C663188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{8E327022-54CE-4720-B177-98FF7756BAB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8C58F6D6-9846-4BF5-942A-157127E7233C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentAchievement", "Web\StudentAchievement.csproj", "{84200590-DC8C-4F42-A3F9-CDB579888369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAchievement.Data.Domain", "Data\StudentAchievement.Data.Domain\StudentAchievement.Data.Domain.csproj", "{137A0E92-E00B-475D-85FD-5A274483CD96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAchievement.Data.Persistence", "Data\StudentAchievement.Data.Persistence\StudentAchievement.Data.Persistence.csproj", "{C3608FB6-60C2-4A71-88C2-67BA18DB193C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAchievement.Service", "Service\StudentAchievement.Service\StudentAchievement.Service.csproj", "{71C2D041-D8E8-4C2F-8722-BB9DDB90544E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +23,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F00CD8B-491C-4C13-AAB3-14AE23411232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F00CD8B-491C-4C13-AAB3-14AE23411232}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F00CD8B-491C-4C13-AAB3-14AE23411232}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F00CD8B-491C-4C13-AAB3-14AE23411232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84200590-DC8C-4F42-A3F9-CDB579888369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84200590-DC8C-4F42-A3F9-CDB579888369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84200590-DC8C-4F42-A3F9-CDB579888369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84200590-DC8C-4F42-A3F9-CDB579888369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137A0E92-E00B-475D-85FD-5A274483CD96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137A0E92-E00B-475D-85FD-5A274483CD96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137A0E92-E00B-475D-85FD-5A274483CD96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137A0E92-E00B-475D-85FD-5A274483CD96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3608FB6-60C2-4A71-88C2-67BA18DB193C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3608FB6-60C2-4A71-88C2-67BA18DB193C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3608FB6-60C2-4A71-88C2-67BA18DB193C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3608FB6-60C2-4A71-88C2-67BA18DB193C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71C2D041-D8E8-4C2F-8722-BB9DDB90544E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C2D041-D8E8-4C2F-8722-BB9DDB90544E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C2D041-D8E8-4C2F-8722-BB9DDB90544E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C2D041-D8E8-4C2F-8722-BB9DDB90544E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{84200590-DC8C-4F42-A3F9-CDB579888369} = {8E327022-54CE-4720-B177-98FF7756BAB3}
+		{137A0E92-E00B-475D-85FD-5A274483CD96} = {8B358AE3-2E48-4631-8B84-20FD3C663188}
+		{C3608FB6-60C2-4A71-88C2-67BA18DB193C} = {8B358AE3-2E48-4631-8B84-20FD3C663188}
+		{71C2D041-D8E8-4C2F-8722-BB9DDB90544E} = {8C58F6D6-9846-4BF5-942A-157127E7233C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {708DD4AA-8185-4EB6-BB64-723F9579E938}

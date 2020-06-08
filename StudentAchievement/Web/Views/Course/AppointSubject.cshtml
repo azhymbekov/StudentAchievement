@@ -1,0 +1,38 @@
+﻿@model StudentAchievement.Service.Models.StudentsForDisplay
+@{
+    ViewData["Title"] = "Назначение";
+    var employees = ViewBag.Courses as IEnumerable<SelectListItem>;
+}
+<h4>Имя студента: @Model.Name</h4>
+<hr />
+<form asp-action="AppointEmployees">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <div class="col-md-6">
+            <table id="projectsTable" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Назначьте Уроки для студента</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var employee in employees)
+                    {
+                        <tr>
+                            <th scope="row">@employee.Text</th>
+                            <td><input type="checkbox" name="Courses" value="@employee.Value" checked="@employee.Selected"></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                <button type="submit" class="btn btn-primary">Назначить</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

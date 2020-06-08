@@ -1,0 +1,69 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Вход";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg double-nav bg-white">
+    <!-- SideNav slide-out button -->
+    <div class="float-left">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+    </div>
+    <!-- Breadcrumb-->
+    <ul class="nav navbar-nav nav-flex-icons ml-auto" style="margin-right: 5%"></ul>
+</nav>
+
+<!--Intro Section-->
+<section class="view intro-2">
+    <div class="h-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-lg-5">
+                    <form asp-route-returnurl="@this.ViewData["ReturnUrl"]" method="post">
+                        <!--Form with header-->
+                        <div class="card wow fadeIn" data-wow-delay="0.3s">
+                            <div class="card-body">
+                                <!--Header-->
+                                <div class="form-header bg-primary">
+                                    <h3><i class="fas fa-user mt-2 mb-2"></i> Вход</h3>
+                                </div>
+                                <!--Body-->
+                                <div asp-validation-summary="All"></div>
+                                <div class="md-form">
+                                    <i class="fas fa-user prefix white-text"></i>
+                                    <input asp-for="UserName" class="form-control">
+                                    <label asp-for="UserName"></label>
+                                    <span asp-validation-for="UserName"></span>
+                                </div>
+                                <div class="md-form">
+                                    <i class="fas fa-lock prefix white-text"></i>
+                                    <input asp-for="Password" class="form-control">
+                                    <label asp-for="Password"></label>
+                                    <span asp-validation-for="Password"></span>
+                                </div>
+                                <div class="d-flex justify-content-around">
+                                    <div>
+                                        <!-- Remember me -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" asp-for="RememberMe" />
+                                            <label asp-for="RememberMe" class="form-check-label white-text"></label>
+                                        </div>
+                                    </div>
+                                    <div class="ml-2">
+                                        <!-- Forgot password -->
+                                        <a asp-action="ForgotPassword" class="white-text">Забыл пароль</a>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block">Войти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Form with header-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

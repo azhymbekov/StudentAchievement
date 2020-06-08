@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200528154452_InitialCreate.cs" />
+    <Compile Remove="Migrations\20200529065309_AddStudent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentAchievement.Data.Domain\StudentAchievement.Data.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

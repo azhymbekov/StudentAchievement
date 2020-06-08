@@ -1,0 +1,27 @@
+﻿@model StudentAchievement.Service.Models.GroupDto
+
+@{
+    ViewData["Title"] = "group";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Детали группы</h4>
+
+<div class="container">
+
+    <h4>@Model.Name</h4>
+
+    @foreach (var group in Model.Students)
+    {
+        <div class="row row-eq-height row-data">
+            <div class="col-xs-5">
+                @group.LastName
+            </div>
+            <div class="col-md-5">
+                @group.FirstName
+            </div>
+        </div>
+    }
+</div>
+
+

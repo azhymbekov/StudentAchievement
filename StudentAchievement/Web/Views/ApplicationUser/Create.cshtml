@@ -1,0 +1,69 @@
+﻿@model StudentAchievement.Service.Models.UserModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-action="Create">
+    <div style="margin: 0 auto; width: 50%">
+        <div class="card">
+            <!--Ни в коем случае не изменять id-->
+            <h5 class="card-header primary-color white-text text-center py-4">
+                <br>Регистрация нового пользователя
+            </h5>
+
+            <div class="card-body px-lg-5 pt-0">
+                <br>
+                <section>
+                    <form asp-action="ChangePassword" asp-controller="Profile">
+                        <div asp-validation-summary="All"></div>
+                        <div class="form-group row">
+                            <label asp-for="Login" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="Login" class="form-control" />
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="LastName" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="LastName" class="form-control" />
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="FirstName" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Patronymic" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="Patronymic" class="form-control" />
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Email" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+                        <div class="form-group row">
+                            <label asp-for="Password" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Email" class="col-sm-4 col-form-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="RoleId" class="control-label"></label>
+                            <select asp-for="RoleId" asp-items="@(new SelectList(ViewBag.Name,"RoleId","Name"))" class="form-control"></select>
+                            <span asp-validation-for="RoleId" class="text-danger"></span>
+                        </div>
+
+
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                            <a asp-action="Index" asp-controller="Profile" class="btn btn-primary">Отмена</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</form>
+

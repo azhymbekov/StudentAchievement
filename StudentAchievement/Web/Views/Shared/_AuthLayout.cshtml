@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@this.ViewData["Title"] - KRAO</title>
+
+    <environment names="Development">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="~/css/bootstrap.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="~/css/mdb.css" rel="stylesheet">
+    </environment>
+    <environment names="Staging,Production">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="~/css/bootstrap.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="~/css/mdb.css" rel="stylesheet">
+    </environment>
+    <link href="~/css/addons/flag.min.css" rel="stylesheet">
+    <link href="~/css/authStyle.css" rel="stylesheet">
+    <script type="text/javascript" src="~/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="~/theme/all.css" />
+    <script src="~/kendo/js/kendo.all.min.js"></script>
+    <script src="~/kendo/js/kendo.aspnetmvc.min.js"></script>
+</head>
+<body>
+    <!--Main layout-->
+    @RenderBody()
+    <!--/Main layout-->
+    <!-- SCRIPTS -->
+    <environment names="Development">
+        <!-- Tooltips -->
+        <script type="text/javascript" src="~/js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="~/js/mdb.min.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <!-- Tooltips -->
+        <script type="text/javascript" src="~/js/popper.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="~/js/mdb.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    </environment>
+    <script>
+        new WOW().init();
+
+        function setLocalizationCulture(culture) {
+            $("#selectedLocalizationCulture").val(culture);
+        }
+    </script>
+</body>
+</html>
